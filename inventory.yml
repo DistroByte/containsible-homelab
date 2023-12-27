@@ -1,0 +1,9 @@
+plugin: community.general.nmap
+strict: yes
+address: 192.168.1.0/24
+port: 22
+dns_resolve: true
+open: true
+exclude: 192.168.1.1-2
+groups:
+  homelab: "ports | selectattr('port', 'equalto', '22')"
